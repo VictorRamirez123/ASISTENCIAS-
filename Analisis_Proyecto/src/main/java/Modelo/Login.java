@@ -7,7 +7,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
 @Entity
 public class Login implements Serializable {
     
@@ -23,38 +22,26 @@ public class Login implements Serializable {
         this.contraseña = contraseña;
     }
 
-    public Login() {
-    }
+    public Login() {  }
 
    
     
-    public int getNu() {
-        return nu;
-    }
+    public int getNu() {    return nu;  }
 
-    public void setNu(int nu) {
-        this.nu = nu;
-    }
+    public void setNu(int nu) {     this.nu = nu;   }
 
  
   
-    public String getUsuario() {
-        return usuario;
-    }
+    public String getUsuario() {    return usuario;   }
 
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
-    }
+    public void setUsuario(String usuario) {   this.usuario = usuario;   }
 
-    public String getContraseña() {
-        return contraseña;
-    }
+    public String getContraseña() {  return contraseña;   }
 
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
-    }
+    public void setContraseña(String contraseña) {     this.contraseña = contraseña;   }
   
   
   
   
 }
+
