@@ -1,5 +1,5 @@
 /*
-
+estudiantes
 */
 package Modelo;
 
@@ -32,45 +32,25 @@ public class Estudiantes implements Serializable {
 
 
 
-    public String getCodMatricula() {
-        return codMatricula;
-    }
+    public String getCodMatricula() {   return codMatricula; }
 
-    public void setCodMatricula(String codMatricula) {
-        this.codMatricula = codMatricula;
-    }
+    public void setCodMatricula(String codMatricula) {  this.codMatricula = codMatricula;   }
 
-    public String getAula() {
-        return aula;
-    }
+    public String getAula() { return aula; }
 
-    public void setAula(String aula) {
-        this.aula = aula;
-    }
+    public void setAula(String aula) {   this.aula = aula;  }
 
-    public String getNombre() {
-        return Nombre;
-    }
+    public String getNombre() {     return Nombre;   }
 
-    public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
-    }
+    public void setNombre(String Nombre) {    this.Nombre = Nombre;   }
 
-    public String getDni() {
-        return Dni;
-    }
+    public String getDni() {      return Dni;   }
 
-    public void setDni(String Dni) {
-        this.Dni = Dni;
-    }
+    public void setDni(String Dni) {    this.Dni = Dni;  }
 
-    public int getNum() {
-        return num;
-    }
+    public int getNum() {      return num;   }
 
-    public void setNum(int num) {
-        this.num = num;
-    }
+    public void setNum(int num) {    this.num = num;   }
     
     
             
