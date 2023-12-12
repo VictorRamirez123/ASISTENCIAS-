@@ -1,7 +1,7 @@
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
-
+//creacion de las tablas
 CREATE TABLE `asistencia` (
   `idasistencia` int(11) NOT NULL,
   `idestudiante` int(11) DEFAULT NULL,
