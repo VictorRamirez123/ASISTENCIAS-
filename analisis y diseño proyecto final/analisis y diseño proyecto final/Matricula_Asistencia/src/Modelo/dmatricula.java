@@ -1,26 +1,15 @@
 
 package Modelo;
 
-
-
 public class dmatricula {
-    
-  
+ 
 private int id;
 private  String estudiante;
 private String periodo;
-
 private  String  grado;
 private String estado;
 
-      
-
-
-
-
-public dmatricula (){
-
-}
+public dmatricula (){}
 
     public dmatricula(int id, String estudiante, String periodo, String grado, String estado) {
         this.id = id;
@@ -29,10 +18,6 @@ public dmatricula (){
         this.grado = grado;
         this.estado = estado;
     }
-
-
-
-
 
 
     public int getId() {
@@ -74,9 +59,6 @@ public dmatricula (){
     public void setEstado(String estado) {
         this.estado = estado;
     }
-
-
-
 
 
 }
