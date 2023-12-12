@@ -202,28 +202,21 @@ return false;
     public boolean eliminar (dalumno  v) {
     
     sql="delete from  estudiante  where idestudiante=?";
-    
     try {
-
-        
         PreparedStatement pst= cn.prepareStatement(sql);
-        
           pst.setInt (1, v.getid_codigo());
-        
-   
-        
          int n= pst.executeUpdate ();
         
         if (n != 0) {
-        
-        return  true ;
-        
-         } else 
-        return  false ;}
+        return  true ;        
+         } else {    
+        return  false ;    
+}   
          } catch (Exception e)  {
-           JOptionPane.showMessageDialog(null,e);
-           return false;} 
-
+JOptionPane.showMessageDialog(null,e);
+return false;
+    } 
+          
       }     
- }
 
+}
