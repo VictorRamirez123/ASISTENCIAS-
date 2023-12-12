@@ -218,32 +218,12 @@ return false;
         
         return  true ;
         
-         } else {
-    
-        return  false ;
-    
-    
-}
-         
+         } else 
+        return  false ;}
          } catch (Exception e)  {
+           JOptionPane.showMessageDialog(null,e);
+           return false;} 
 
-JOptionPane.showMessageDialog(null,e);
-
-return false;
-
-
-
- 
-    } 
-       
-        
       }     
-    
-    
-    
-    
-    
-    
-
-}
+ }
 
