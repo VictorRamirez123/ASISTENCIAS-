@@ -1,34 +1,22 @@
 package Controladores;
-
 import java.sql.PreparedStatement;
 import Modelo.dalumno;
-
 import java.sql.Connection;
-
 import java.sql.ResultSet;
 import java.sql.Statement;
-
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-
 public class nalumno {
-  
     private conexion mysql=new conexion();
-    
     private  Connection  cn= mysql.Connectar(); 
-    
     private  String  sql;
-    
-    
     public DefaultTableModel mostrar (String buscar){
         
        DefaultTableModel modelo;
-       
        String[] titulos = {"Codigo" , "Identificacion","Nombres","Apellidos","Fecha Nacimiento","Lugar de Nacimiento","Madre","Padre" ,"Domicilio","Documentos Presentados" };
-        
+      
        String[] registros =new String [10];
                  
-       
        modelo= new DefaultTableModel (null,titulos);
        
        sql= "select  * from estudiante where   nombres  like '" + buscar + "%'";
@@ -85,14 +73,12 @@ public class nalumno {
                  
     }
     
-    
-    
     public boolean insertar (dalumno v) {
     
     sql= " insert into estudiante (identificacion,nombres,apellidos,fecha_nacimiento,lugar_de_nacimiento,madre,padre,domicilio,documento_presentados) values (?,?,?,?,?,?,?,?,?)";
     
     try {
-        
+      
         PreparedStatement pst = cn.prepareStatement(sql);
          
         pst.setString (1, v.getcedula());
