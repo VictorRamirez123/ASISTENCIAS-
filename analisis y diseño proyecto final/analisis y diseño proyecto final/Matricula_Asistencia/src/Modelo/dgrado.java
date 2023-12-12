@@ -1,22 +1,13 @@
 
 package Modelo;
 
-
 public class dgrado{
- 
 private int idgrado;
 private  String nombre;
 private  String nivel;
-
-
 private String descripcion;
 
-
-
-
-public dgrado (){
-
-}
+public dgrado (){}
 
     public dgrado(int idgrado, String nombre, String nivel, String descripcion) {
         this.idgrado = idgrado;
@@ -24,7 +15,6 @@ public dgrado (){
         this.nivel = nivel;
         this.descripcion = descripcion;
     }
-
     public int getIdgrado() {
         return idgrado;
     }
@@ -57,11 +47,6 @@ public dgrado (){
         this.descripcion = descripcion;
     }
 
-
-
-
-
-
-
 }
+
 
