@@ -1,25 +1,18 @@
-//
+
 package Modelo;
 
-
 public class dasistencia {
-
   
-    
- private int idasistencia;
+private int idasistencia;
 private  String estudiante;
 private  String grado;
-
 private String tarde;
 private String falto;
 private String justificado;
 private String f_asistencia;
 private String cod_usuario;
 
-public  dasistencia() {
-    
-    
-}
+public  dasistencia() {}
   public dasistencia(int idasistencia, String estudiante, String grado, String tarde, String falto, String justificado, String f_asistencia, String cod_usuario) {
         this.idasistencia = idasistencia;
         this.estudiante = estudiante;
