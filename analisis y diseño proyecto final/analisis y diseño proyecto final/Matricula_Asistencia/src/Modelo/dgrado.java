@@ -2,6 +2,7 @@
 package Modelo;
 
 public class dgrado{
+    //atributos
 private int idgrado;
 private  String nombre;
 private  String nivel;
