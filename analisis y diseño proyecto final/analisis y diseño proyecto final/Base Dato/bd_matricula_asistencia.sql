@@ -14,6 +14,7 @@ CREATE TABLE `asistencia` (
   `cod_usuario` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--creacion de tabla estudiante--
 CREATE TABLE `estudiante` (
   `idEstudiante` int(11) NOT NULL,
   `identificacion` varchar(45) DEFAULT NULL,
