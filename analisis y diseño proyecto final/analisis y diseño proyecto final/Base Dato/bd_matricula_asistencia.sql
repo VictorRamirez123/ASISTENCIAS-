@@ -1,9 +1,6 @@
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
-
-
 
 CREATE TABLE `asistencia` (
   `idasistencia` int(11) NOT NULL,
@@ -15,7 +12,6 @@ CREATE TABLE `asistencia` (
   `F_Asistencia` varchar(45) DEFAULT NULL,
   `cod_usuario` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
 
 CREATE TABLE `estudiante` (
   `idEstudiante` int(11) NOT NULL,
@@ -31,11 +27,8 @@ CREATE TABLE `estudiante` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
-
 INSERT INTO `estudiante` (`idEstudiante`, `identificacion`, `Nombres`, `Apellidos`, `fecha_nacimiento`, `Lugar_de_nacimiento`, `Madre`, `Padre`, `Domicilio`, `Documento_Presentados`) VALUES
 (1, '98745879', 'luis', 'perales roca', '9/12/2015', 'lima', 'ana roca vicente', 'saul perales lomas', 'av sauce 14 lima', 'certificado estudio disponible');
-
-
 
 CREATE TABLE `grado` (
   `idgrado` int(11) NOT NULL,
@@ -44,13 +37,9 @@ CREATE TABLE `grado` (
   `descripcion` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-
-
 INSERT INTO `grado` (`idgrado`, `nombre`, `nivel`, `descripcion`) VALUES
 (1, 'primero', 'primaria', 'insturccion grado'),
 (2, 'segundo', 'primaria', 'instruccion grado');
-
-
 
 CREATE TABLE `matricula` (
   `idmatricula` int(11) NOT NULL,
@@ -60,12 +49,8 @@ CREATE TABLE `matricula` (
   `estado` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-
-
 INSERT INTO `matricula` (`idmatricula`, `idestudiante`, `idgrado`, `periodo`, `estado`) VALUES
 (1, 1, 1, '2023', 'Activo');
-
-
 
 CREATE TABLE `usuario` (
   `cod_usuario` int(11) NOT NULL,
@@ -78,19 +63,15 @@ CREATE TABLE `usuario` (
   `estado` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-
-
 INSERT INTO `usuario` (`cod_usuario`, `usuario`, `contraseña`, `cargo`, `persona`, `direccion`, `telefono`, `estado`) VALUES
 (1, 'admin', '123', 'Administrador', 'luis perales roca', 'av lince 17', '3256478', 'disponible'),
 (2, 'luis', '12', 'Supervisor', 'luis', 'av  sauce 14', '6547874', 'disponible');
-
 
 ALTER TABLE `asistencia`
   ADD PRIMARY KEY (`idasistencia`),
   ADD KEY `idestudiante` (`idestudiante`),
   ADD KEY `idgrado` (`idgrado`),
   ADD KEY `cod_usuario` (`cod_usuario`);
-
 
 ALTER TABLE `estudiante`
   ADD PRIMARY KEY (`idEstudiante`);
@@ -130,8 +111,6 @@ ALTER TABLE `usuario`
   MODIFY `cod_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 
-
-
 ALTER TABLE `asistencia`
   ADD CONSTRAINT `asistencia_ibfk_1` FOREIGN KEY (`idestudiante`) REFERENCES `estudiante` (`idEstudiante`),
   ADD CONSTRAINT `asistencia_ibfk_2` FOREIGN KEY (`idgrado`) REFERENCES `grado` (`idgrado`),
@@ -141,4 +120,5 @@ ALTER TABLE `matricula`
   ADD CONSTRAINT `matricula_ibfk_1` FOREIGN KEY (`idestudiante`) REFERENCES `estudiante` (`idEstudiante`),
   ADD CONSTRAINT `matricula_ibfk_2` FOREIGN KEY (`idgrado`) REFERENCES `grado` (`idgrado`);
 COMMIT;
+
 
