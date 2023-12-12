@@ -28,7 +28,7 @@ CREATE TABLE `estudiante` (
   `Documento_Presentados` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-
+--insertacion de datos--
 INSERT INTO `estudiante` (`idEstudiante`, `identificacion`, `Nombres`, `Apellidos`, `fecha_nacimiento`, `Lugar_de_nacimiento`, `Madre`, `Padre`, `Domicilio`, `Documento_Presentados`) VALUES
 (1, '98745879', 'luis', 'perales roca', '9/12/2015', 'lima', 'ana roca vicente', 'saul perales lomas', 'av sauce 14 lima', 'certificado estudio disponible');
 
