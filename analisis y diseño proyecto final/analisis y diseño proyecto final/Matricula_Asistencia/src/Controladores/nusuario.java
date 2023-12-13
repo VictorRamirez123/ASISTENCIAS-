@@ -75,12 +75,9 @@ public class nusuario {
                 return null;
                 
             }
-                 
-                 
+                    
                  
     }
-    
-    
     
     public boolean insertar (dusuario v) {
     
@@ -122,8 +119,6 @@ JOptionPane.showMessageDialog(null,e);
         
       }   
          
-
-    
   
     public boolean editar (dusuario  v) {
     
@@ -149,9 +144,6 @@ JOptionPane.showMessageDialog(null,e);
            
             pst.setString (7, v.getEstado());
         
-                
-                 
-       
            
         pst.setInt (8, v.getIdusuario());
         
@@ -243,19 +235,16 @@ return false;
 
     }
     
-    
     public boolean eliminar (dusuario  v) {
     
     sql="delete from  usuario where cod_usuario=?";
     
     try {
 
-        
         PreparedStatement pst= cn.prepareStatement(sql);
         
           pst.setInt (1, v.getIdusuario());
         
-   
         
          int n= pst.executeUpdate ();
         
@@ -276,16 +265,11 @@ JOptionPane.showMessageDialog(null,e);
 
 return false;
 
-
-
  
     } 
        
         
       }     
-    
-    
-    
     
     
     
