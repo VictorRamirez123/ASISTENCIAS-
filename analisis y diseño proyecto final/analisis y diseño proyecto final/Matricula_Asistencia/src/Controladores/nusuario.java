@@ -1,5 +1,5 @@
-
 package Controladores;
+
 import java.sql.PreparedStatement;
 import Modelo.dusuario;
 
@@ -16,9 +16,7 @@ import javax.swing.table.DefaultTableModel;
 public class nusuario {
     
     private conexion mysql=new conexion();
-    
     private  Connection  cn= mysql.Connectar(); 
-    
     private  String  sql;
     
    
